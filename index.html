@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rahul ❤️ Niluu</title>
+<style>
+body{margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#ff4e8a,#8a2be2);overflow:hidden;font-family:Arial;color:#fff}
+.container{text-align:center}button{padding:15px 30px;margin:10px;border:none;border-radius:30px;font-size:20px;cursor:pointer}
+#yes{background:#00d26a;color:#fff}#no{background:#ff3b3b;color:#fff;position:absolute}.heart{position:absolute;animation:fall 6s linear infinite}
+@keyframes fall{from{transform:translateY(-50px)}to{transform:translateY(110vh);opacity:0}}
+</style></head><body>
+<div class="container">
+<h1>Hey Niluu ❤️</h1>
+<h2>Will You Be My Girlfriend? 💍❤️</h2>
+<button id="yes" onclick="yes()">YES ❤️</button>
+<button id="no" onmouseover="move()">NO 💔</button>
+</div>
+<script>
+function yes(){
+document.body.innerHTML=`<div style="display:flex;justify-content:center;align-items:center;flex-direction:column;height:100vh;background:#000;color:#fff">
+<h1>I Love You Niluu ❤️</h1><h2>- Rahul</h2>
+<video autoplay controls style="width:90%;max-width:450px"><source src="cat.mp4" type="video/mp4"></video></div>`;
+}
+function move(){let b=document.getElementById('no');b.style.left=Math.random()*(innerWidth-120)+'px';b.style.top=Math.random()*(innerHeight-60)+'px';}
+setInterval(()=>{let h=document.createElement('div');h.className='heart';h.innerHTML='❤️';h.style.left=Math.random()*100+'vw';document.body.appendChild(h);setTimeout(()=>h.remove(),6000)},300);
+</script></body></html>
